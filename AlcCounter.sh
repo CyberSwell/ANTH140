@@ -20,5 +20,5 @@ UNITS=$(awk '/Units/{print $2}' <<< $WEBPAGE | sed 's/ /\n/g')
 CSV_DATA=$(paste -d: <(echo "$STORES") <(echo "$UNITS") | paste -s -d, -)
 
 # Put locations into CSV in line with date/time
-echo "$FILE_DATE,$CSV_DATA" >> master.csv
+echo "$FILE_DATE,$CSV_DATA" >> /home/ubuntu/ANTH140/master.csv
 
